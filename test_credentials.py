@@ -43,7 +43,17 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(Credentials.display_credentials(),
                          Credentials.credential_list)
 
-   
+    def test_delete_credentials(self):
+        '''
+        Test if we can remove a credential from the credential list
+        '''
+        self.new_credentials.save_credentials()
+        test_credential = Credentials(
+            'http://instagram.com', 'ntaleb', '@ntaleb123')
+        test_credential.save_credentials()
+
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credentials.credential_list), 1)
 
 
 if __name__ == "__main__":
