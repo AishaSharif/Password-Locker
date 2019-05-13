@@ -14,3 +14,10 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials = Credentials(
             'http://twitter.com', 'nntaleb', 'ntaleb123')
 
+    def tearDown(self):
+        '''
+        function that cleans up after each test has run
+        '''
+        Credentials.credential_list = []
+
+ 
