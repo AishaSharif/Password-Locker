@@ -19,4 +19,10 @@ class Credentials:
         '''
         Credentials.credential_list.append(self)
 
-    
+    @classmethod
+    def display_credentials(cls):
+        '''
+        Method that returns a list of credentials
+        '''
+        return cls.credential_list
+
