@@ -20,7 +20,15 @@ class test_user(unittest.TestCase):
         '''
         User.users = []
 
-   
+    def test_init(self):
+        '''
+        Test if the object is initiated properly
+        '''
+        self.assertEqual(self.new_user.name, 'Nassim Taleb')
+        self.assertEqual(self.new_user.email, 'nassim@blackswan.com')
+        self.assertEqual(self.new_user.username, 'ntaleb')
+        self.assertEqual(self.new_user.phone_number, 'nasim123')
+
 
 
 if __name__ == "__main__":
