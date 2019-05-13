@@ -20,4 +20,13 @@ class TestCredentials(unittest.TestCase):
         '''
         Credentials.credential_list = []
 
+    def test_init(self):
+        '''
+        test if the objects are initiated properly
+        '''
+        self.assertEqual(self.new_credentials.account_url,
+                         'http://twitter.com')
+        self.assertEqual(self.new_credentials.account_username, 'nntaleb')
+        self.assertEqual(self.new_credentials.account_password, 'ntaleb123')
+
  
