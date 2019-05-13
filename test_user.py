@@ -14,7 +14,13 @@ class test_user(unittest.TestCase):
         self.new_user = User(
             'Nassim Taleb', 'nassim@blackswan.com', 'ntaleb', 'nasim123')
 
-    
+    def tearDown(self):
+        '''
+        Cleans up after each test has run
+        '''
+        User.users = []
+
+   
 
 
 if __name__ == "__main__":
